@@ -1,0 +1,115 @@
+:root {
+    --tree-line-height: 20px;
+}
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    text-align: center;
+}
+.category-wrapper::before, .category-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: var(--tree-line-height);
+    right: calc(50% + 50px);
+    width: calc(100% - 50px);
+    border-top: 1px solid #8b8b8b;
+}
+
+.category-wrapper::after {
+    left: calc(50% - 50px);
+    border-left: 1px solid #8b8b8b;
+}
+
+.category-wrapper:only-of-type {
+    padding: 0;
+}
+.category-wrapper:only-of-type::before, .category-wrapper:only-of-type::after {
+    display: none;
+}
+
+.category-wrapper:first-of-type::before {
+    display: none;
+}
+.category-wrapper:first-of-type::after {
+    border-radius: 5px 0 0 0;
+}
+
+.category-wrapper:last-of-type::before {
+    border-right: 1px solid #8b8b8b;
+    border-radius: 0 5px 0 0;
+}
+.category-wrapper:last-of-type::after {
+    border: 0 none;
+    display: none;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+}
+
+.category-name {
+    padding: 15px 10px;
+    margin-right: 5px;
+    min-width: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.category-actions {
+    display: flex;
+}
+
+.category-actions-buttons {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #8b8b8b;
+    outline: none;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.category-actions-buttons img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.category-actions-delete {
+    background-color: red !important;
+}
+
+.category-actions-cancel {
+    background-color: yellow !important;
+}
+
+.category-actions-submit {
+    background-color: lime;
+}
+
+.subcategories-wrapper {
+    display: flex;
+    padding-inline-start: 0;
+    margin: 0;
+    padding-top: var(--tree-line-height);
+    position: relative;
+}
+.subcategories-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: var(--tree-line-height);
+    box-sizing: border-box;
+    left: calc(50% - 50px);
+    width: 0;
+    border-left: 1px solid  #8b8b8b;
+}

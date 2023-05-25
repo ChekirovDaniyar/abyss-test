@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #8b8b8b;
+    height: 100px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: stretch;
+}
+
+.header-actions button {
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.header-actions-list-view {
+    background-color: #7856e5 !important;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.header-actions-navigation {
+    margin: 0 10px;
+}
+
+.header-actions-navigation img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+.header-actions select {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* For IE10 */
+.header-actions select::-ms-expand {
+    display: none;
+}
+
+.header-actions select option {
+    padding: 5px 10px;
+}
+
+.header-actions-zoom {
+    font-size: 30px;
+    color: #b0b1b2;
+}

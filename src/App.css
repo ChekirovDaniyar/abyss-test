@@ -1,0 +1,26 @@
+.App {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  cursor: move;
+  overflow: hidden;
+}
+
+.zoom-wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: calc(100% - 50px);
+}
+
+.zoom-container {
+  width: 100%;
+  height: 100%;
+}
+
+.tree {
+  padding-inline-start: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+}
